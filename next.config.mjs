@@ -1,8 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable image optimization for placeholder images
+  // Enable image optimization with remotePatterns
   images: {
-    domains: ['placeholder.svg'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'leetcard.jacoblin.cool',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placeholder.svg',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
